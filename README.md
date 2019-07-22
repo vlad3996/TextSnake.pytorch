@@ -1,13 +1,10 @@
-# TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes
+## TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes
 
-A PyTorch implement of **TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes** (ECCV 2018) by `Megvii`
+**TextSnake: A Flexible Representation for Detecting Text of Arbitrary Shapes** (ECCV 2018) by `Megvii` with 2 versions of my pretrained weights. 
 
 - Paper link: [arXiv:1807.01544](https://arxiv.org/abs/1807.01544)
 - Original author's github: [princewang1994/TextSnake.pytorch](https://github.com/princewang1994/TextSnake.pytorch)
 
-<div style="color:#0000FF" align="center">
-<img src="http://princepicbed.oss-cn-beijing.aliyuncs.com/blog_20190120144708.png" width="630"/> 
-</div>
 
 ## Simple inference example
 
@@ -36,6 +33,30 @@ visualize_detection(cv2.resize(source_img, (size, size)), tr_pred, tcl_pred[0], 
 ```
 
 ![](demo/chester_minsk_20.07.2019_output.jpg)
+
+
+## Paper
+
+
+![](http://princepicbed.oss-cn-beijing.aliyuncs.com/blog_20181228172334.png)
+
+Comparison of diﬀerent representations for text instances. (a) Axis-aligned rectangle. (b) Rotated rectangle. (c) Quadrangle. (d) TextSnake. Obviously, the proposed TextSnake representation is able to eﬀectively and precisely describe the geometric properties, such as location, scale, and bending of curved text with perspective distortion, while the other representations (axis-aligned rectangle, rotated rectangle or quadrangle) struggle with giving accurate predictions in such cases.
+
+<div style="color:#0000FF" align="center">
+<img src="http://princepicbed.oss-cn-beijing.aliyuncs.com/blog_20181228172346.png" width="530"/> 
+</div>
+
+
+Textsnake elements:
+
+- center point
+- tangent line
+- text region
+
+
+<div style="color:#0000FF" align="center">
+<img src="http://princepicbed.oss-cn-beijing.aliyuncs.com/blog_20190120144708.png" width="630"/> 
+</div>
 
 
 ## License
